@@ -1,0 +1,223 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+nav {
+  width: 20vw;
+  height: 100%;
+  background: transparent linear-gradient(180deg, #0e7e33 0%, #073f1a 100%) 0%
+    0% no-repeat padding-box;
+  border: 1px solid #707070;
+}
+
+main {
+  width: 80vw;
+  background: #ebebeb 0% 0% no-repeat padding-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+nav > img {
+  width: 80%;
+  margin: 2em auto;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 2em;
+}
+
+li i {
+  font-size: 1.5em;
+}
+
+.button {
+  border: 2px solid #ffffff;
+  border-radius: 2em;
+  margin-left: 1em;
+  text-align: center;
+  letter-spacing: 0.72px;
+  color: #ffffff;
+  width: 60%;
+}
+
+li {
+  text-align: left;
+  color: white;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+ul {
+  list-style-type: none;
+  font: normal normal normal 17px/24px Segoe UI;
+  letter-spacing: 0.72px;
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 1em 0em 1em 1em;
+}
+/* 
+li:last-child {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+} */
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/*   ZNAJDŹ MECZ    */
+
+.find-match-logo {
+  width: 80%;
+  text-align: center;
+}
+.fm-logo {
+  width: 90%;
+  height: 90%;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.location {
+  width: 80%;
+  height: 20%;
+  margin-top: 2em;
+}
+
+.first-line {
+  height: 40%;
+
+  display: flex;
+  flex-direction: row;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: inset 7px 7px 7px #00000029, 7px 7px 7px #00000029;
+  border: 5px solid #707070;
+  border-radius: 2em;
+  margin-bottom: 1em;
+}
+
+#Icon1 {
+  height: 70%;
+  width: 5%;
+  text-align: center;
+  background-color: transparent;
+  margin: auto 0.2em auto 0.5em;
+  font-size: 2.5em;
+  color: gray;
+}
+
+.location-input {
+  height: 70%;
+  width: 85%;
+  text-align: left;
+  border: 0;
+  margin: auto 0 auto 0;
+  font: normal normal normal 25px/24px Arial;
+  letter-spacing: 0px;
+  color: #b6afaf;
+}
+
+.vertical-line {
+  border: 3px solid #707070;
+  background-color: #707070;
+  margin: 0;
+  height: auto;
+}
+
+.gps-button {
+  width: 10%;
+  height: 70%;
+  margin: auto 0.5em auto 0;
+  border: 0;
+
+  background-color: transparent;
+}
+#Icon2 {
+  height: 100%;
+  width: 100%;
+  font-size: 3em;
+  color: gray;
+}
+
+.second-line {
+  height: 30%;
+  width: 25%;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: inset 7px 7px 7px #00000029, 7px 7px 7px #00000029;
+  border: 5px solid #707070;
+  border-radius: 2em;
+  margin-top: 1em;
+}
+
+.zakres-input {
+  height: 70%;
+  width: 90%;
+  text-align: center;
+  border: 0;
+  margin: 0.5em;
+  background-color: transparent;
+  font: normal normal normal 15px/24px Arial;
+  letter-spacing: 0px;
+  color: #b6afaf;
+}
+
+.fm-button {
+  height: 5vw;
+  width: 40%;
+  background: #2e704d 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 2em;
+  margin: 1em;
+  padding: 0.5em;
+
+  text-align: center;
+  font: normal normal bold 30px/24px Arial;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+/*  KONIEC ZNAJDŹ MECZ  */
+
+/*  NEWS  */
+.news-logo {
+  width: 30%;
+  height: 30%;
+  margin: 0;
+}
+
+/* LOWER LEAUGES */
+.lowerleaugeslogo {
+  margin-top: 2em;
+}
+
+.lowerleaugstopic {
+  width: 70%;
+  height: 80px;
+  display: flex;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+
+  align-items: center;
+  justify-content: center;
+  font: normal normal bold 30px/24px Arial;
+  letter-spacing: 0px;
+  color: #000903;
+}
