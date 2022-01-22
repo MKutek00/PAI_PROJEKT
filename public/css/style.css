@@ -68,12 +68,12 @@ ul {
   padding: 0;
   margin: 1em 0em 1em 1em;
 }
-/* 
+
 li:last-child {
   position: absolute;
   bottom: 0;
   width: 100%;
-} */
+} 
 
 main {
   display: flex;
