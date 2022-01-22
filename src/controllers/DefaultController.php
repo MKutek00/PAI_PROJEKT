@@ -31,4 +31,5 @@ class DefaultController extends AppController {
     public function schedule(){
         $this->render('schedule');
     }
+
 }

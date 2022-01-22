@@ -14,5 +14,8 @@ Router::get('leauge_table', 'DefaultController');
 Router::get('lower_leauges', 'DefaultController');
 Router::get('schedule', 'DefaultController');
 
+Router::post('login', 'SecurityController');
+Router::post('add_news', 'NewsController');
+
 
 Router::run($path);

@@ -37,10 +37,10 @@
             <section class="news">
                 <div class="big news2">                    
                     <div>
-                        <h2>Title</h2>
-                        <p>description</p>
+                        <h2><?= $news->getTitle() ?></h2>
+                        <p><?= $news->getDescription() ?></p>
                     </div>
-                    <img src="public/img/uploads/football.jpg">
+                    <img src="public/img/uploads/<?= $news->getImage() ?>">
                 </div>
                 <div class="small news1">
                     <img src="public/img/uploads/football.jpg">
@@ -49,7 +49,7 @@
                         <p>description</p>
                     </div>
                 </div>
-                <div class="small news3">
+                <!-- <div class="small news3">
                     <img src="public/img/uploads/football.jpg">
                     <div>
                         <h2>Title</h2>
@@ -84,7 +84,7 @@
                     <div>
                         <h2>Title</h2>
                         <p>description</p>
-                    </div></div>
+                    </div></div> -->
 
             </section>
         </main>
