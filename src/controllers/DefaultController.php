@@ -8,10 +8,6 @@ class DefaultController extends AppController {
         $this->render('login');
     }
 
-    public function news(){
-        $this->render('news');
-    }
-
     public function find_match(){
         $this->render('find_match');
     }

@@ -2,6 +2,7 @@
 
 require_once 'AppController.php';
 require_once __DIR__ .'/../models/News.php';
+require_once __DIR__ .'/../repository/NewsRepository.php';
 
 class NewsController extends AppController {
 
@@ -10,6 +11,18 @@ class NewsController extends AppController {
     const UPLOAD_DIRECTORY = '/../public/img/uploads/';
 
     private $message = [];
+    private $newsRepository;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->newsRepository = new NewsRepository();
+    }
+
+    public function news(){
+        $news = $this->newsRepository->getNews();
+        $this->render('news', ['news' => $news]);
+    }
 
     public function add_news()
     {   
@@ -23,8 +36,12 @@ class NewsController extends AppController {
 
             // TODO create new project object and save it in database
             $news = new News($_POST['title'], $_POST['description'], $_FILES['file']['name']);
+            $this->newsRepository->addNews($news);
 
-            return $this->render('news', ['messages' => $this->message, 'news'=>$news]);
+            return $this->render('news',[
+                'messages' => $this->message,
+                'news' => $this->newsRepository->getNews()]
+                );
         }
         return $this->render('add_news', ['messages' => $this->message]);
     }
