@@ -11,18 +11,17 @@ class ScoreTableRepository extends Repository {
         $result = [];
 
         $stmt = $this->database->connect()->prepare('
-            select t.name, s.points, s.games, s.wins, s.loses, s.draws, s."goalplus", s."goalminus", s."goalplusminus"
+            select t.name, s.points, s.games, s.wins, s.loses, s.draws, s."goalplus", s."goalminus", s."goalplusminus", l.name
             from score_table s join teams t on s.druzyna = t."team_ID" join leagues l
             on l.leauge_id = t."league_ID" where l.leauge_id=:id
         ');
         $stmt-> bindParam(':id',$id, PDO::PARAM_INT);
         $stmt->execute();
 
-        $score_table = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        foreach ($score_table as $table){
+        $score_table = $stmt->fetchAll(PDO::FETCH_NAMED);
+        foreach ($score_table as $table) {
             $result[] = new Table(
-                $table['name'],
+                $table['name'][0],
                 $table['points'],
                 $table['games'],
                 $table['wins'],
@@ -30,7 +29,8 @@ class ScoreTableRepository extends Repository {
                 $table['draws'],
                 $table['goalplus'],
                 $table['goalminus'],
-                $table['goalplusminus']
+                $table['goalplusminus'],
+                $table['name'][1]
             );
         }
         return $result;

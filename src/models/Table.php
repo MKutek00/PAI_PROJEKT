@@ -10,6 +10,9 @@ class Table{
     private $goalplus;
     private $goalminus;
     private $goalplusminus;
+    private $leauge_name;
+
+
 
     public function __construct(string $team_name,
                                 int $points,
@@ -19,7 +22,9 @@ class Table{
                                 int $draws,
                                 int $goal_plus,
                                 int $goal_minus,
-                                int $goal_plus_minus)
+                                int $goal_plus_minus,
+                                string $leauge_name
+    )
     {
         $this->name = $team_name;
         $this->points = $points;
@@ -30,6 +35,17 @@ class Table{
         $this->goalplus = $goal_plus;
         $this->goalminus = $goal_minus;
         $this->goalplusminus = $goal_plus_minus;
+        $this->leauge_name = $leauge_name;
+    }
+
+    public function getLeaugeName()
+    {
+        return $this->leauge_name;
+    }
+
+    public function setLeaugeName($leauge_name): void
+    {
+        $this->leauge_name = $leauge_name;
     }
 
     public function getName()
