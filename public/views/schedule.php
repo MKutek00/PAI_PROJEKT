@@ -42,188 +42,19 @@
                 <div id="round1">
                     <h3><i class="fas fa-long-arrow-alt-right"></i>Kolejka 1</h3>
                     <table>
+                        <?php foreach($schedule as $game):?>
                         <tr>
-                            <th>Nazwa Team A</th>
+                            <th><?= $game->getTeamOne(); ?></th>
                             <th>-</th>
-                            <th>Nazwa Team B</th>
+                            <th><?= $game->getTeamTwo(); ?></th>
                             <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
+                            <th><?= $game->getDate(); ?><i class="fas fa-map-marker-alt"></i></th>
                         </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
+                            <?php endforeach; ?>
                     </table>    
                 </div>
                 <div id="round2">
                     <h3><i class="fas fa-long-arrow-alt-right"></i>Kolejka 2</h3>
-                    <table>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                    </table>    
-                </div>
-                <div id="round3">
-                    <h3><i class="fas fa-long-arrow-alt-right"></i>Kolejka 3</h3>
-                    <table>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                        <tr>
-                            <th>Nazwa Team A</th>
-                            <th>-</th>
-                            <th>Nazwa Team B</th>
-                            <th></th>
-                            <th>1 Października 2021 8:00<i class="fas fa-map-marker-alt"></i></th>
-                        </tr>
-                    </table>    
-                </div>
-                <div id="round4">
-                    <h3><i class="fas fa-long-arrow-alt-right"></i>Kolejka 4</h3>
                     <table>
                         <tr>
                             <th>Nazwa Team A</th>
