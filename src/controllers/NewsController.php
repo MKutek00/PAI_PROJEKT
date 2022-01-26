@@ -10,8 +10,8 @@ class NewsController extends AppController {
     const SUPPORTED_TYPES = ['image/png', 'image/jpeg'];
     const UPLOAD_DIRECTORY = '/../public/img/uploads/';
 
-    private $message = [];
-    private $newsRepository;
+        private $message = [];
+        private $newsRepository;
 
     public function __construct()
     {

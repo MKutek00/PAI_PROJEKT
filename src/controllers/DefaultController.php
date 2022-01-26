@@ -20,10 +20,6 @@ class DefaultController extends AppController {
         $this->render('leauge_table');
     }
 
-    public function lower_leauges(){
-        $this->render('lower_leauges');
-    }
-
     public function schedule(){
         $this->render('schedule');
     }

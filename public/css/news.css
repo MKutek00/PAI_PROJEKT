@@ -1,40 +1,12 @@
 section {
   width: 90%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    "n1 n2 n2"
-    "n3 n4 n5"
-    "n6 n7 n8";
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2em;
   padding: 2em;
   overflow: auto;
 }
 
-.news1 {
-  grid-area: n1;
-}
-.news2 {
-  grid-area: n2;
-}
-.news3 {
-  grid-area: n3;
-}
-.news4 {
-  grid-area: n4;
-}
-.news5 {
-  grid-area: n5;
-}
-.news6 {
-  grid-area: n6;
-}
-.news7 {
-  grid-area: n7;
-}
-.news8 {
-  grid-area: n8;
-}
 
 .big {
   border: 1px solid gray;

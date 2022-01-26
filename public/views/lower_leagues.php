@@ -37,26 +37,11 @@
             <div class="lowerleaugstopic">Ligi Regionalne 2021/22 - Małopolski ZPN</div>
             <section class="lower_leauges">
                 <ul class="classAlist">
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa A 2021/2022, grupa: ----</li>
+<!--                    --><?php //var_dump($leagues);?>
+                    <?php foreach($leagues as $leauge): ?>
+                    <li><i class="fas fa-long-arrow-alt-right"></i><?= $leauge->getName(); ?></li>
+                    <?php endforeach;?>
                 </ul>
-
                 <ul class="classBlist">
                     <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa B 2021/2022, grupa: ----</li>
                     <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa B 2021/2022, grupa: ----</li>
@@ -74,13 +59,6 @@
                     <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa B 2021/2022, grupa: ----</li>
                     <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa B 2021/2022, grupa: ----</li>
                     <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa B 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa B 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa B 2021/2022, grupa: ----</li>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa B 2021/2022, grupa: ----</li>
-                </ul>
-
-                <ul class="classCList">
-                    <li><i class="fas fa-long-arrow-alt-right"></i>Keeza Klasa C 2021/2022, grupa: ----</li>
                 </ul>
             </section>
         </main>
