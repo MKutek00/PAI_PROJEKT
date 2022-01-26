@@ -11,7 +11,7 @@ class LeagueRepository extends Repository {
         $result = [];
 
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM "leaugesA";
+            SELECT * FROM leagues;
         ');
         $stmt->execute();
         $leagues = $stmt->fetchAll(PDO::FETCH_ASSOC);

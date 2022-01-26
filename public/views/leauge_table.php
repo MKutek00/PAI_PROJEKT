@@ -66,201 +66,203 @@
                     <th>B-</th>
                     <th>B+/B-</th>
                 </tr>
-                <tr class="promotion">
-                    <td>1</td>
-                    <td>Team A</td>
+                    <?php $step=1;foreach($table as $record):?>
+                <tr class="normal"">
+                    <td><?php echo $step;?></td>
+                    <td><?= $record->getName(); ?></td>
                     <td></td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
+                    <td><?= $record->getPoints();; ?></td>
+                    <td><?= $record->getGames(); ?></td>
+                    <td><?= $record->getWins(); ?></td>
+                    <td><?= $record->getLoses(); ?></td>
+                    <td><?= $record->getDraws(); ?></td>
+                    <td><?= $record->getGoalplus(); ?></td>
+                    <td><?= $record->getGoalminus(); ?></td>
+                    <td><?= $record->getGoalplusminus(); ?></td>
                 </tr>
-                <tr class="promotion">
-                    <td>2</td>
-                    <td>Team B</td>
-                    <td></td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
-                <tr class="normal">
-                    <td>3</td>
-                    <td>Team C</td>
-                    <td></td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
-                <tr class="normal">
-                    <td>4</td>
-                    <td>Team D</td>
-                    <td></td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
-                <tr class="normal">
-                    <td>5</td>
-                    <td>Team E</td>
-                    <td></td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
-                <tr class="normal">
-                    <td>6</td>
-                    <td>Team F</td>
-                    <td></td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
-                <tr class="normal">
-                    <td>7</td>
-                    <td>Team G</td>
-                    <td></td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
-                <tr class="normal">
-                    <td>8</td>
-                    <td>Team H</td>
-                    <td></td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
-                <tr class="normal">
-                    <td>9</td>
-                    <td>Team I</td>
-                    <td></td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
-                <tr class="normal">
-                    <td>10</td>
-                    <td>Team J</td>
-                    <td></td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
-                <tr class="normal">
-                    <td>11</td>
-                    <td>Team K</td>
-                    <td></td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
-                <tr class="normal">
-                    <td>12</td>
-                    <td>Team L</td>
-                    <td></td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
-                <tr class="normal">
-                    <td>13</td>
-                    <td>Team N</td>
-                    <td></td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
-                <tr class="decrease">
-                    <td>14</td>
-                    <td>Team M</td>
-                    <td></td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
-                <tr class="decrease">
-                    <td>15</td>
-                    <td>Team O</td>
-                    <td></td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                    <td>x</td>
-                </tr>
+                    <?php $step += 1;endforeach; ?>
+<!--                <tr class="promotion">-->
+<!--                    <td>2</td>-->
+<!--                    <td>Team B</td>-->
+<!--                    <td></td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                </tr>-->
+<!--                <tr class="normal">-->
+<!--                    <td>3</td>-->
+<!--                    <td>Team C</td>-->
+<!--                    <td></td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                </tr>-->
+<!--                <tr class="normal">-->
+<!--                    <td>4</td>-->
+<!--                    <td>Team D</td>-->
+<!--                    <td></td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                </tr>-->
+<!--                <tr class="normal">-->
+<!--                    <td>5</td>-->
+<!--                    <td>Team E</td>-->
+<!--                    <td></td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                </tr>-->
+<!--                <tr class="normal">-->
+<!--                    <td>6</td>-->
+<!--                    <td>Team F</td>-->
+<!--                    <td></td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                </tr>-->
+<!--                <tr class="normal">-->
+<!--                    <td>7</td>-->
+<!--                    <td>Team G</td>-->
+<!--                    <td></td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                </tr>-->
+<!--                <tr class="normal">-->
+<!--                    <td>8</td>-->
+<!--                    <td>Team H</td>-->
+<!--                    <td></td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                </tr>-->
+<!--                <tr class="normal">-->
+<!--                    <td>9</td>-->
+<!--                    <td>Team I</td>-->
+<!--                    <td></td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                </tr>-->
+<!--                <tr class="normal">-->
+<!--                    <td>10</td>-->
+<!--                    <td>Team J</td>-->
+<!--                    <td></td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                </tr>-->
+<!--                <tr class="normal">-->
+<!--                    <td>11</td>-->
+<!--                    <td>Team K</td>-->
+<!--                    <td></td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                </tr>-->
+<!--                <tr class="normal">-->
+<!--                    <td>12</td>-->
+<!--                    <td>Team L</td>-->
+<!--                    <td></td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                </tr>-->
+<!--                <tr class="normal">-->
+<!--                    <td>13</td>-->
+<!--                    <td>Team N</td>-->
+<!--                    <td></td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                </tr>-->
+<!--                <tr class="decrease">-->
+<!--                    <td>14</td>-->
+<!--                    <td>Team M</td>-->
+<!--                    <td></td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                </tr>-->
+<!--                <tr class="decrease">-->
+<!--                    <td>15</td>-->
+<!--                    <td>Team O</td>-->
+<!--                    <td></td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                    <td>x</td>-->
+<!--                </tr>-->
             </table>
         </div>
     </main>

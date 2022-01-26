@@ -300,6 +300,7 @@ tbody {
 
 .promotion td {
   color: #77ff21;
+  text-align: center;
 }
 .promotion:hover {
   background-color: #02ff45;
@@ -310,6 +311,7 @@ tbody {
 
 .normal td {
   color: #828282;
+  text-align: center;
 }
 .normal:hover {
   background-color: #f2f2f2;
@@ -319,6 +321,8 @@ tbody {
 }
 .decrease td {
   color: #ff0000;
+  text-align: center;
+
 }
 .decrease:hover {
   background-color: #ff0000;
