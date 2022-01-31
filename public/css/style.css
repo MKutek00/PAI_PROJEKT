@@ -92,8 +92,7 @@ main {
   text-align: center;
 }
 .fm-logo {
-  width: 90%;
-  height: 90%;
+  width: 50%;
   text-align: center;
   justify-content: center;
   margin: auto;
@@ -102,7 +101,8 @@ main {
 .location {
   width: 80%;
   height: 20%;
-  margin-top: 2em;
+  /*margin-top: 2em;*/
+  text-align: center;
 }
 
 .first-line {
@@ -183,12 +183,12 @@ main {
 }
 
 .fm-button {
-  height: 5vw;
-  width: 40%;
+  width: 80%;
   background: #2e704d 0% 0% no-repeat padding-box;
   border: 1px solid #707070;
   border-radius: 2em;
   margin: 1em;
+  margin-top: 10px;
   padding: 0.5em;
 
   text-align: center;
@@ -393,4 +393,28 @@ form.login {
   padding: 1em;
   margin: 1em;
   width: 50%;
+}
+
+.no-valid {
+  border: 3px solid red;
+  border-radius: 1em;
+  box-shadow: 0 0 0.2em red;
+  outline: none;
+}
+
+.leftpanel{
+  border: 2px solid #ffffff;
+  border-radius: 2em;
+  margin-left: 1em;
+  text-align: center;
+  letter-spacing: 0.72px;
+  color: #ffffff;
+  width: 60%;
+
+  background: transparent;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 2em;
+
+  font-size: 1em;
 }

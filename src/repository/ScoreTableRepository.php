@@ -6,7 +6,7 @@ require_once __DIR__.'/../models/Table.php';
 
 class ScoreTableRepository extends Repository {
 
-    public function getScoreTable(int $id): array
+    public function getScoreTable(int $league_id): array
     {
         $result = [];
 
@@ -15,7 +15,7 @@ class ScoreTableRepository extends Repository {
             from score_table s join teams t on s.druzyna = t."team_ID" join leagues l
             on l.leauge_id = t."league_ID" where l.leauge_id=:id
         ');
-        $stmt-> bindParam(':id',$id, PDO::PARAM_INT);
+        $stmt-> bindParam(':id',$league_id, PDO::PARAM_INT);
         $stmt->execute();
 
         $score_table = $stmt->fetchAll(PDO::FETCH_NAMED);

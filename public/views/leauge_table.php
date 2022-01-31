@@ -2,6 +2,8 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet"> 
     <link rel="stylesheet" type= "text/css" href="public/css/style.css">
+    <script type="text/javascript" src="./public/js/buttons.js" defer></script>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">    
     <title>TABELA</title>
 </head>
@@ -11,19 +13,19 @@
         <ul>
             <li>
                 <i class="fas fa-home"></i>
-                <a href="#" class="button">Strona Główna</a>
+                <button id="sgButton" class="leftpanel">Strona Główna</button>
             </li>
             <li>
                 <i class="far fa-futbol"></i>
-                <a href="#" class="button">Znajdz Mecz</a>
+                <button id="fmButton" class="leftpanel">Znajdz Mecz</button>
             </li>
             <li>
                 <i class="fas fa-table"></i>
-                <a href="#" class="button">Niższe Ligi</a>
+                <button id="nlButton" class="leftpanel">Niższe Ligi</button>
             </li>
             <li>
                 <i class="fas fa-plus"></i>
-                <a href="#" class="button">Dodaj News</a>
+                <button id="dnButton" class="leftpanel">Dodaj News</button>
             </li>
             <li>
                 <i class="fab fa-instagram"></i>

@@ -18,7 +18,8 @@ class LeagueRepository extends Repository {
 
         foreach ($leagues as $league){
             $result[] = new League(
-                $league['name']
+                $league['name'],
+                $league['leauge_id']
             );
         }
         return $result;

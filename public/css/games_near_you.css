@@ -4,6 +4,7 @@ section {
   grid-template-columns: 1fr;
   padding: 1em 2em;
   margin: 1em;
+  margin-top: 3em;
   overflow: auto;
   justify-items: center;
   row-gap: 1em;

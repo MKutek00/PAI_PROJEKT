@@ -16,7 +16,9 @@ class TableController extends AppController {
     }
 
     public function leauge_table(){
-        $tables = $this->scoreTableRepository->getScoreTable(10); //TODO NA STAŁE WARTOŚĆ USTAWIONA
+
+        $tables = $this->scoreTableRepository->getScoreTable(11); //TODO how to change this from static to generated
+                                                                    //TODO when pressing link
             return $this->render('leauge_table', [
                 'table' => $tables
             ]);

@@ -3,12 +3,11 @@
 require_once 'AppController.php';
 require_once __DIR__.'/../models/User.php';
 require_once __DIR__.'/../repository/UserRepository.php';
-require_once __DIR__.'/NewsController.php';
 
 
 class SecurityController extends AppController {
-    public function login()
-    {
+
+    public function login(){
         $userRepository = new UserRepository();
 
         if(!$this->isPost()){
@@ -31,7 +30,13 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['Błędne hasło!']]);
         }
 
-        $newsController = new NewsController();
-        return $newsController->news();
+
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/news");
+
+    }
+    public function register(){
+        $this->render('register');
+
     }
 }
