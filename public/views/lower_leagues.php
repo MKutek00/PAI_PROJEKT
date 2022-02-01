@@ -40,11 +40,10 @@
             <div class="lowerleaugstopic">Ligi Regionalne 2021/22 - Małopolski ZPN</div>
             <section class="lower_leauges">
                 <ul class="classAlist">
-<!--                    --><?php //var_dump($leagues);?>
                     <?php foreach($leagues as $leauge): ?>
-                    <li><i class="fas fa-long-arrow-alt-right"></i>
-                       <a href="leauge_table.php?id=<?= $leauge->getId(); ?>">
-                           <?= $leauge->getName(); ?> </a></li>
+                    <li>
+                        <a href="league_table?id=<?= $leauge->getId(); ?>"><i class="fas fa-long-arrow-alt-right"></i>
+                            <?= $leauge->getName(); ?></a></li>
                     <?php endforeach;?>
                 </ul>
                 <ul class="classBlist">

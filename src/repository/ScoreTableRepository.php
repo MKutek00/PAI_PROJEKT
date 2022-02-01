@@ -11,7 +11,7 @@ class ScoreTableRepository extends Repository {
         $result = [];
 
         $stmt = $this->database->connect()->prepare('
-            select t.name, s.points, s.games, s.wins, s.loses, s.draws, s."goalplus", s."goalminus", s."goalplusminus", l.name
+            select t.name, s.points, s.games, s.wins, s.loses, s.draws, s."goalplus", s."goalminus", s."goalplusminus", l.name,l.leauge_id
             from score_table s join teams t on s.druzyna = t."team_ID" join leagues l
             on l.leauge_id = t."league_ID" where l.leauge_id=:id
         ');
@@ -30,9 +30,11 @@ class ScoreTableRepository extends Repository {
                 $table['goalplus'],
                 $table['goalminus'],
                 $table['goalplusminus'],
-                $table['name'][1]
+                $table['name'][1],
+                $table['leauge_id']
             );
         }
+//        var_dump($result);
         return $result;
     }
 

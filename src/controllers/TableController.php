@@ -15,13 +15,13 @@ class TableController extends AppController {
         $this->scoreTableRepository = new ScoreTableRepository();
     }
 
-    public function leauge_table(){
+    public function league_table(){
 
-        $tables = $this->scoreTableRepository->getScoreTable(11); //TODO how to change this from static to generated
-                                                                    //TODO when pressing link
-            return $this->render('leauge_table', [
-                'table' => $tables
-            ]);
+        $id = $_GET["id"];
 
-    }
+        $tables = $this->scoreTableRepository->getScoreTable($id);
+
+        return $this->render('leauge_table', [
+            'table' => $tables
+        ]);    }
 }

@@ -71,7 +71,7 @@
                         <table>
                             <tr class="upper">
                                 <th class="bgf">
-                                    <p>ul. Warszawska 24, Kraków</p>
+                                    <p><?= $game->getPlace(); ?></p>
                                     <p><?= $game->getDstc(); ?>km</p>
                                 </th>
                                 <th class="ln">

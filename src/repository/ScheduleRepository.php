@@ -10,7 +10,7 @@ class ScheduleRepository extends Repository {
     {
         $result = [];
 
-        $stmt = $this->database->connect()->prepare('select t1.name, t2.name, s.date, l.name
+        $stmt = $this->database->connect()->prepare('select t1.name, t2.name, s.date, l.name,l.leauge_id
 from schedule s
          left join teams t1
                    on s.team_one = t1."team_ID"
@@ -28,7 +28,10 @@ from schedule s
                 $match['name'][0],
                 $match['name'][1],
                 $match['date'],
-                $match['name'][2]
+                $match['name'][2],
+                '',
+                $match['leauge_id']
+
             );
         }
         return $result;

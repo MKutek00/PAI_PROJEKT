@@ -36,8 +36,16 @@
     </nav>
     <main>
         <div class="selection-container">
-            <div class="selection"><p class="select">TABELA</p></div>
-            <div class="selection"><p class="select">TERMINARZ</p></div>
+            <div class="selection">
+                <p class="select">
+                    <a href="league_table?id=<?= $table[0]->getLeaugeId();?>">TABELA </a>
+                </p>
+            </div>
+            <div class="selection">
+                <p class="select">
+                    <a href="league_schedule?id=<?= $table[0]->getLeaugeId();?>">TERMINARZ </a>
+                </p>
+            </div>
         </div>
         <div class="ptable">
             <h1 class="headin"><?= $table[0]->getLeaugeName();?></h1>

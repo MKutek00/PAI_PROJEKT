@@ -6,16 +6,39 @@ class Schedule{
     private $league_name;
     private $date;
     private $dstc;
+    private $league_id;
+    private $place;
 
-    public function __construct(string $team_one,string $team_two, string $league_name, string $date, string $dstc)
+    public function __construct(string $team_one,string $team_two, string $league_name, string $date, string $dstc, int $league_id, $place = null)
     {
         $this->team_one = $team_one;
         $this->team_two = $team_two;
         $this->date = $date;
         $this->league_name = $league_name;
         $this->dstc = $dstc;
+        $this->place = $place;
+        $this->league_id = $league_id;
 
+    }
 
+    public function getLeagueId()
+    {
+        return $this->league_id;
+    }
+
+    public function setLeagueId($league_id): void
+    {
+        $this->league_id = $league_id;
+    }
+
+    public function getPlace(): string
+    {
+        return $this->place;
+    }
+
+    public function setPlace(string $place): void
+    {
+        $this->place = $place;
     }
 
     public function getDstc()

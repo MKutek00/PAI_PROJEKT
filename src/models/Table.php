@@ -11,6 +11,7 @@ class Table{
     private $goalminus;
     private $goalplusminus;
     private $leauge_name;
+    private $leauge_id;
 
 
 
@@ -23,7 +24,8 @@ class Table{
                                 int $goal_plus,
                                 int $goal_minus,
                                 int $goal_plus_minus,
-                                string $leauge_name
+                                string $leauge_name,
+                                int $league_id
     )
     {
         $this->name = $team_name;
@@ -36,7 +38,21 @@ class Table{
         $this->goalminus = $goal_minus;
         $this->goalplusminus = $goal_plus_minus;
         $this->leauge_name = $leauge_name;
+        $this->leauge_id = $league_id;
     }
+
+
+    public function getLeaugeId()
+    {
+        return $this->leauge_id;
+    }
+
+
+    public function setLeaugeId($leauge_id): void
+    {
+        $this->leauge_id = $leauge_id;
+    }
+
 
     public function getLeaugeName()
     {

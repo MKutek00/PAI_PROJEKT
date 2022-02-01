@@ -32,8 +32,8 @@ nav > img {
 
 a {
   text-decoration: none;
-  display: inline-block;
-  line-height: 2em;
+  /*display: inline-block;*/
+  /*line-height: 2em;*/
 }
 
 li i {
@@ -418,3 +418,4 @@ form.login {
 
   font-size: 1em;
 }
+

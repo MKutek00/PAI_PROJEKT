@@ -15,9 +15,11 @@ class ScheduleController extends AppController {
         $this->scheduleRepository = new ScheduleRepository();
     }
 
-    public function schedule()
+    public function league_schedule()
     {
-        $schedule = $this->scheduleRepository->getSchedule(10); //TODO NA STAŁE WARTOŚĆ USTAWIONA
+        $id = $_GET["id"];
+
+        $schedule = $this->scheduleRepository->getSchedule($id); //TODO NA STAŁE WARTOŚĆ USTAWIONA
         return $this->render('schedule', [
             'schedule' => $schedule
         ]);

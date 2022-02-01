@@ -16,15 +16,68 @@ class FindMatchController extends AppController{
 
 
     public function find_match(){
+        if(!$this->isPost()){
+            return $this->render('find_match');
+        }
         $location = $_POST['location'];
         $range = $_POST['zakres'];
 
-//        // TODO zmień wartość location na współrzędne x i y
-//        $this->scheduleRepository->find_match(49.982338,19.24755,30);
-//        $this->message[]=$location.$range; //49.982338,19.24755,30
-        $matches = $this->findMatchRepository->findMatch(49.982338,19.24755,30);
+        $location=$this->geocode($location);
+        $lat = $location[0];
+        $lon = $location[1];
+
+        $matches = $this->findMatchRepository->findMatch($lat,$lon,$range);
         return $this->render('find_match', ['messages' => $this->message,
                                                     'matches' => $matches]);
+    }
+
+function geocode($address)
+{
+
+    // url encode the address
+    $address = urlencode($address);
+
+    // google map geocode api url
+    $url = "https://maps.googleapis.com/maps/api/geocode/json?address={$address}&key=AIzaSyB4DoB4ybtvUV2OwUNEKgqYuw5cdA_vYpE";
+
+    // get the json response
+    $resp_json = file_get_contents($url);
+
+    // decode the json
+    $resp = json_decode($resp_json, true);
+    // response status will be 'OK', if able to geocode given address
+    if($resp['status']=='OK'){
+
+        // get the important data
+        $lati = $resp['results'][0]['geometry']['location']['lat'] ?? "";
+        $longi = $resp['results'][0]['geometry']['location']['lng'] ?? "";
+        $formatted_address = $resp['results'][0]['formatted_address'] ?? "";
+
+        // verify if data is complete
+        if($lati && $longi && $formatted_address){
+
+            // put the data in the array
+            $data_arr = array();
+
+            array_push(
+                $data_arr,
+                $lati,
+                $longi,
+                $formatted_address
+            );
+
+            return $data_arr;
+
+        }else{
+            return false;
+        }
 
     }
+    else{
+        echo "<strong>ERROR: {$resp['status']}</strong>";
+        return false;
+    }
+}
+
+
 }

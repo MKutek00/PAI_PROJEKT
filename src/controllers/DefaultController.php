@@ -12,9 +12,6 @@ class DefaultController extends AppController {
         $this->render('find_match');
     }
 
-    public function games_near_you(){
-        $this->render('games_near_you');
-    }
 
     public function leauge_table(){
         $this->render('leauge_table');

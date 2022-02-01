@@ -16,11 +16,14 @@ class LeagueController extends AppController{
     {
         parent::__construct();
         $this->leaguesRepository = new LeagueRepository();
+        $this->tableRepository = new ScoreTableRepository();
+
     }
 
     public function lower_leagues(){
         $leagues = $this->leaguesRepository->getLeagues();
         $this->render('lower_leagues', ['leagues' => $leagues]);
     }
+
 
 }
