@@ -20,24 +20,24 @@ class FindMatchRepository extends Repository
             where calculate_distance(:y,:x,
         t1."coordinate y", t1."coordinate x") < :range
 order by calculate_distance(:y,:x,t1."coordinate y", t1."coordinate x")');
-        $stmt->bindParam(':y',$y, PDO::PARAM_STR);
-        $stmt->bindParam(':x',$x, PDO::PARAM_STR);
-        $stmt->bindParam(':range',$range, PDO::PARAM_STR);
+        $stmt->bindParam(':y', $y, PDO::PARAM_STR);
+        $stmt->bindParam(':x', $x, PDO::PARAM_STR);
+        $stmt->bindParam(':range', $range, PDO::PARAM_STR);
 
         $stmt->execute();
+
         $matches = $stmt->fetchAll(PDO::FETCH_NAMED);
-        foreach ($matches as $match){
-//echo $this->reverse_geocode($match['coordinate x'],$match['coordinate y']);
-//var_dump($this->reverse_geocode($match['coordinate x'],$match['coordinate y']));
-            $result[] = new Schedule(
-                $match['name'][0],
-                $match['name'][1],
-                $match['name'][2],
-                $match['date'],
-                $match['round'],
-                $match['leauge_id'],
-                $this->reverse_geocode($match['coordinate x'],$match['coordinate y'])
-            );
+
+        foreach ($matches as $match) {
+            $result[] = [
+                'nameA' => $match['name'][0],
+                'nameB' => $match['name'][1],
+                'nameC' => $match['name'][2],
+                'date' => $match['date'],
+                'round' => $match['round'],
+                'leauge_id' => $match['leauge_id'],
+                'location' => $this->reverse_geocode($match['coordinate x'], $match['coordinate y']),
+            ];
         }
         return $result;
     }

@@ -3,10 +3,10 @@
     <link rel="stylesheet" type= "text/css" href="public/css/style.css">
     <link rel="stylesheet" type= "text/css" href="public/css/lower_leauges.css">
     <script type="text/javascript" src="./public/js/buttons.js" defer></script>
-    <script type="text/javascript" src="./public/js/table.js" defer></script>
 
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">    <title>Znajdz Mecz</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Ligi</title>
 </head>
 <body>
         <nav>

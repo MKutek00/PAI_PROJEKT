@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type= "text/css" href="public/css/style.css">
-    <link rel="stylesheet" type= "text/css" href="public/css/news.css">
+    <link rel="stylesheet" type= "text/css" href="public/css/add_news.css">
     <script type="text/javascript" src="./public/js/buttons.js" defer></script>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">    <title>Znajdz Mecz</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Dodaj News</title>
 </head>
 <body>
     <nav>
@@ -35,7 +36,7 @@
     </nav>
     <main>
         <section class="project-form">
-            <h1>UPLOAD</h1>
+            <h1>Dodaj News</h1>
             <form action="add_news" method="POST" ENCTYPE="multipart/form-data">
                 <div class="messages">
                     <?php
@@ -50,7 +51,7 @@
                 <textarea name="description" rows=5 placeholder="description"></textarea>
 
                 <input type="file" name="file"/><br/>
-                <button type="submit">send</button>
+                <button type="submit">Dodaj</button>
             </form>
         </section>
     </main>

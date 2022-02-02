@@ -36,7 +36,7 @@ function validatePassword() {
     );
 }
 
-// emailInput.addEventListener('keyup', validateEmail);
-// confirmedPasswordInput.addEventListener('keyup', validatePassword);
+emailInput.addEventListener('keyup', validateEmail);
+confirmedPasswordInput.addEventListener('keyup', validatePassword);
 
 

@@ -7,7 +7,7 @@ $path = parse_url( $path, PHP_URL_PATH);
 
 Router::get('', 'DefaultController');
 
-Router::post('find_match', 'FindMatchController');
+Router::get('find_match', 'FindMatchController');
 
 Router::get('lower_leagues', 'LeagueController');
 Router::get('news', 'NewsController');
@@ -18,6 +18,8 @@ Router::post('add_news', 'NewsController');
 
 Router::get('league_table', 'TableController');
 Router::get('league_schedule', 'ScheduleController');
+
+Router::get('get_match', 'FindMatchController');
 
 
 

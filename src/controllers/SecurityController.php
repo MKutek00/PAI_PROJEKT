@@ -7,17 +7,23 @@ require_once __DIR__.'/../repository/UserRepository.php';
 
 class SecurityController extends AppController {
 
+    private $userRepository;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->userRepository = new UserRepository();
+    }
     public function login(){
-        $userRepository = new UserRepository();
 
         if(!$this->isPost()){
             return $this->render('login');
         }
 
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
 
-        $user = $userRepository->getUser($email);
+        $user = $this->userRepository->getUser($email);
         if(!$user){
             return $this->render('login', ['messages' =>['Brak użytkownika w bazie danych']]);
         }
@@ -36,7 +42,22 @@ class SecurityController extends AppController {
 
     }
     public function register(){
-        $this->render('register');
+        if (!$this->isPost()) {
+            return $this->render('register');
+        }
+
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $confirmedPassword = $_POST['confirmedPassword'];
+        $name = $_POST['name'];
+
+        if ($password !== $confirmedPassword) {
+            return $this->render('register', ['messages' => ['Please provide proper password']]);
+        }
+        $user = new User($email,  md5($password), $name);
+        $this->userRepository->addUser($user);
+
+        return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
 
     }
 }

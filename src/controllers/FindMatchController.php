@@ -14,21 +14,41 @@ class FindMatchController extends AppController{
         $this->findMatchRepository = new FindMatchRepository();
     }
 
-
     public function find_match(){
-        if(!$this->isPost()){
-            return $this->render('find_match');
+        return $this->render('find_match');
+
+    }
+
+    public function get_match(){
+//        if(!$this->isPost()){
+//            return $this->render('find_match');
+//        }
+//        $location = $_POST['location'];
+//        $range = $_POST['zakres'];
+//
+//        $location=$this->geocode($location);
+//        $lat = $location[0];
+//        $lon = $location[1];
+//
+//        $matches = $this->findMatchRepository->findMatch($lat,$lon,$range);
+//        return $this->render('find_match', ['messages' => $this->message,
+//                                                    'matches' => $matches]);
+        $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+        if ($contentType === "application/json") {
+            $content = trim(file_get_contents("php://input"));
+
+            $decoded = json_decode($content, true);
+
+            header('Content-type: application/json');
+            http_response_code(200);
+
+            $location = $this->geocode($decoded['location']);
+            $lat = $location[0];
+            $lon = $location[1];
+
+            echo json_encode($this->findMatchRepository->findMatch($lat,$lon,$decoded['zakres']));
+
         }
-        $location = $_POST['location'];
-        $range = $_POST['zakres'];
-
-        $location=$this->geocode($location);
-        $lat = $location[0];
-        $lon = $location[1];
-
-        $matches = $this->findMatchRepository->findMatch($lat,$lon,$range);
-        return $this->render('find_match', ['messages' => $this->message,
-                                                    'matches' => $matches]);
     }
 
 function geocode($address)
