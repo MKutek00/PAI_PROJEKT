@@ -6,8 +6,7 @@ require_once __DIR__.'/../models/Table.php';
 
 class ScoreTableRepository extends Repository {
 
-    public function getScoreTable(int $league_id): array
-    {
+    public function getScoreTable(int $league_id): array{
         $result = [];
 
         $stmt = $this->database->connect()->prepare('
@@ -17,8 +16,8 @@ class ScoreTableRepository extends Repository {
         ');
         $stmt-> bindParam(':id',$league_id, PDO::PARAM_INT);
         $stmt->execute();
-
         $score_table = $stmt->fetchAll(PDO::FETCH_NAMED);
+
         foreach ($score_table as $table) {
             $result[] = new Table(
                 $table['name'][0],
@@ -34,8 +33,6 @@ class ScoreTableRepository extends Repository {
                 $table['leauge_id']
             );
         }
-//        var_dump($result);
         return $result;
     }
-
 }

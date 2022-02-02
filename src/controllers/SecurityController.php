@@ -35,21 +35,16 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['Błędne hasło!']]);
         }
 
-            session_start();
-        $_SESSION['last'] = $_SESSION['current'];
-        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
+        session_start();
+        $_SESSION['id'] = $user->getEmail();
 
-            $_SESSION['id'] = $user->getEmail();
-
-            $url = "http://$_SERVER[HTTP_HOST]";
-            header("Location: {$url}/news");
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/news");
     }
 
 
     public function register(){
         session_start();
-        $_SESSION['last'] = $_SESSION['current'];
-        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
 
         if (!$this->isPost()) {
             return $this->render('register');

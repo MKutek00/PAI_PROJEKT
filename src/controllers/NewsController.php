@@ -13,16 +13,13 @@ class NewsController extends AppController {
         private $message = [];
         private $newsRepository;
 
-    public function __construct()
-    {
+    public function __construct(){
         parent::__construct();
         $this->newsRepository = new NewsRepository();
     }
 
     public function news(){
         session_start();
-//        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
-
 
         if(!isset($_SESSION['id'])){
             $url = "http://$_SERVER[HTTP_HOST]";
@@ -38,13 +35,10 @@ class NewsController extends AppController {
             $url = "http://$_SERVER[HTTP_HOST]";
             header("Location: {$url}/login");
         }
-        $_SESSION['last'] = $_SESSION['current'];
-        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
 
-        echo $_SESSION['current'];
-        echo $_SESSION['last'];
-        if($_SESSION['id'] !== "gutek@gmail.com"){
-            header("Location: {$_SESSION['current']}");
+        if($_SESSION['id'] != "gutek@gmail.com"){
+            header("Location: {$_SERVER['HTTP_REFERER']}");
+
         }
 
         if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
@@ -67,8 +61,7 @@ class NewsController extends AppController {
         return $this->render('add_news', ['messages' => $this->message]);
     }
 
-    private function validate(array $file): bool
-    {
+    private function validate(array $file): bool{
         if ($file['size'] > self::MAX_FILE_SIZE) {
             $this->message[] = 'Za duży rozmiar pliku!';
             echo "rozmiar";

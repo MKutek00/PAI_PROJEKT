@@ -12,8 +12,7 @@ class LeagueController extends AppController{
     private $leaguesRepository;
     private $tableRepository;
 
-    public function __construct()
-    {
+    public function __construct(){
         parent::__construct();
         $this->leaguesRepository = new LeagueRepository();
         $this->tableRepository = new ScoreTableRepository();
@@ -26,12 +25,7 @@ class LeagueController extends AppController{
             $url = "http://$_SERVER[HTTP_HOST]";
             header("Location: {$url}/login");
         }
-        $_SESSION['last'] = $_SESSION['current'];
-        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
-
         $leagues = $this->leaguesRepository->getLeagues();
         $this->render('lower_leagues', ['leagues' => $leagues]);
     }
-
-
 }

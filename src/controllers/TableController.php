@@ -21,15 +21,10 @@ class TableController extends AppController {
             $url = "http://$_SERVER[HTTP_HOST]";
             header("Location: {$url}/login");
         }
-        $_SESSION['last'] = $_SESSION['current'];
-        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
 
         $id = $_GET["id"];
-
         $tables = $this->scoreTableRepository->getScoreTable($id);
 
-        return $this->render('leauge_table', [
-            'table' => $tables
-        ]);
+        return $this->render('leauge_table', ['table' => $tables]);
     }
 }

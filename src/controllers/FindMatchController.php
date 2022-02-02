@@ -8,8 +8,7 @@ class FindMatchController extends AppController{
     private $message = [];
     private $findMatchRepository;
 
-    public function __construct()
-    {
+    public function __construct(){
         parent::__construct();
         $this->findMatchRepository = new FindMatchRepository();
     }
@@ -20,34 +19,18 @@ class FindMatchController extends AppController{
             $url = "http://$_SERVER[HTTP_HOST]";
             header("Location: {$url}/login");
         }
-        $_SESSION['last'] = $_SESSION['current'];
-        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
 
         return $this->render('find_match');
 
     }
 
     public function get_match(){
-//        if(!$this->isPost()){
-//            return $this->render('find_match');
-//        }
-//        $location = $_POST['location'];
-//        $range = $_POST['zakres'];
-//
-//        $location=$this->geocode($location);
-//        $lat = $location[0];
-//        $lon = $location[1];
-//
-//        $matches = $this->findMatchRepository->findMatch($lat,$lon,$range);
-//        return $this->render('find_match', ['messages' => $this->message,
-//                                                    'matches' => $matches]);
+
         session_start();
         if(!isset($_SESSION['id'])){
             $url = "http://$_SERVER[HTTP_HOST]";
             header("Location: {$url}/login");
         }
-        $_SESSION['last'] = $_SESSION['current'];
-        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
 
         $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
         if ($contentType === "application/json") {
@@ -67,53 +50,51 @@ class FindMatchController extends AppController{
         }
     }
 
-function geocode($address)
-{
+    function geocode($address){
 
-    // url encode the address
-    $address = urlencode($address);
+        // url encode the address
+        $address = urlencode($address);
 
-    // google map geocode api url
-    $url = "https://maps.googleapis.com/maps/api/geocode/json?address={$address}&key=AIzaSyB4DoB4ybtvUV2OwUNEKgqYuw5cdA_vYpE";
+        // google map geocode api url
+        $url = "https://maps.googleapis.com/maps/api/geocode/json?address={$address}&key=AIzaSyB4DoB4ybtvUV2OwUNEKgqYuw5cdA_vYpE";
 
-    // get the json response
-    $resp_json = file_get_contents($url);
+        // get the json response
+        $resp_json = file_get_contents($url);
 
-    // decode the json
-    $resp = json_decode($resp_json, true);
-    // response status will be 'OK', if able to geocode given address
-    if($resp['status']=='OK'){
+        // decode the json
+        $resp = json_decode($resp_json, true);
+        // response status will be 'OK', if able to geocode given address
+        if($resp['status']=='OK'){
 
-        // get the important data
-        $lati = $resp['results'][0]['geometry']['location']['lat'] ?? "";
-        $longi = $resp['results'][0]['geometry']['location']['lng'] ?? "";
-        $formatted_address = $resp['results'][0]['formatted_address'] ?? "";
+            // get the important data
+            $lati = $resp['results'][0]['geometry']['location']['lat'] ?? "";
+            $longi = $resp['results'][0]['geometry']['location']['lng'] ?? "";
+            $formatted_address = $resp['results'][0]['formatted_address'] ?? "";
 
-        // verify if data is complete
-        if($lati && $longi && $formatted_address){
+            // verify if data is complete
+            if($lati && $longi && $formatted_address){
 
-            // put the data in the array
-            $data_arr = array();
+                // put the data in the array
+                $data_arr = array();
 
-            array_push(
-                $data_arr,
-                $lati,
-                $longi,
-                $formatted_address
-            );
+                array_push(
+                    $data_arr,
+                    $lati,
+                    $longi,
+                    $formatted_address
+                );
 
-            return $data_arr;
+                return $data_arr;
 
-        }else{
+            }else{
+                return false;
+            }
+
+        }
+        else{
+            echo "<strong>ERROR: {$resp['status']}</strong>";
             return false;
         }
-
     }
-    else{
-        echo "<strong>ERROR: {$resp['status']}</strong>";
-        return false;
-    }
-}
-
 
 }

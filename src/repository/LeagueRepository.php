@@ -6,8 +6,7 @@ require_once __DIR__.'/../models/League.php';
 
 class LeagueRepository extends Repository {
 
-    public function getLeagues(): array
-    {
+    public function getLeagues(): array{
         $result = [];
 
         $stmt = $this->database->connect()->prepare('

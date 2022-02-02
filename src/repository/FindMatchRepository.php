@@ -3,10 +3,9 @@
 require_once 'Repository.php';
 require_once __DIR__.'/../models/Schedule.php';
 
-class FindMatchRepository extends Repository
-{
-    public function findMatch($x,$y,$range) :array
-    {
+class FindMatchRepository extends Repository{
+
+    public function findMatch($x,$y,$range) :array{
         $result = [];
 
         $stmt = $this->database->connect()->prepare('select t1.name, t2.name, s.date, l.name,round(calculate_distance(:y,:x,
@@ -44,14 +43,11 @@ order by calculate_distance(:y,:x,t1."coordinate y", t1."coordinate x")');
 
     function reverse_geocode($lat, $lng){
 
-
         $url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng='.$lat.','.$lng.'&key=AIzaSyB4DoB4ybtvUV2OwUNEKgqYuw5cdA_vYpE&sensor=false';
         $json = @file_get_contents($url);
         $data = json_decode($json);
         $status = $data->status;
         if($status=="OK") {
-            //Get address from json data
-    //            var_dump($data);
             $city= $data->results[0]->formatted_address;
         } else{
             $city = 'Location Not Found';

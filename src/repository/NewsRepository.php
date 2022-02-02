@@ -3,11 +3,9 @@
 require_once 'Repository.php';
 require_once __DIR__.'/../models/News.php';
 
-class NewsRepository extends Repository
-{
+class NewsRepository extends Repository{
 
-    public function getNews(): array
-    {
+    public function getNews(): array{
         $result = [];
 
         $stmt = $this->database->connect()->prepare('
@@ -28,8 +26,7 @@ class NewsRepository extends Repository
     }
 
 
-    public function addNews(News $news): void
-    {
+    public function addNews(News $news): void{
         $stmt = $this->database->connect()->prepare('
             INSERT INTO news (title, description, image)
             VALUES (?, ?, ?)

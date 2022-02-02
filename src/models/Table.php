@@ -13,8 +13,6 @@ class Table{
     private $leauge_name;
     private $leauge_id;
 
-
-
     public function __construct(string $team_name,
                                 int $points,
                                 int $games,
@@ -47,12 +45,10 @@ class Table{
         return $this->leauge_id;
     }
 
-
     public function setLeaugeId($leauge_id): void
     {
         $this->leauge_id = $leauge_id;
     }
-
 
     public function getLeaugeName()
     {

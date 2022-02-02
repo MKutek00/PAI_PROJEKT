@@ -9,8 +9,7 @@ class Schedule{
     private $league_id;
     private $place;
 
-    public function __construct(string $team_one,string $team_two, string $league_name, string $date, string $dstc, int $league_id, $place = null)
-    {
+    public function __construct(string $team_one,string $team_two, string $league_name, string $date, string $dstc, int $league_id, $place = null){
         $this->team_one = $team_one;
         $this->team_two = $team_two;
         $this->date = $date;
