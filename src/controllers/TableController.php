@@ -16,6 +16,13 @@ class TableController extends AppController {
     }
 
     public function league_table(){
+        session_start();
+        if(!isset($_SESSION['id'])){
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/login");
+        }
+        $_SESSION['last'] = $_SESSION['current'];
+        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
 
         $id = $_GET["id"];
 
@@ -23,5 +30,6 @@ class TableController extends AppController {
 
         return $this->render('leauge_table', [
             'table' => $tables
-        ]);    }
+        ]);
+    }
 }

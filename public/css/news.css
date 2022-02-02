@@ -69,7 +69,7 @@ section {
   justify-content: space-around;
 }
 .small > div > h2 {
-  font: normal normal bold 35px/30px Arial;
+  font: normal normal bold 30px/30px Arial;
   height: 40%;
   margin: 5px 0 0 10px;
 }

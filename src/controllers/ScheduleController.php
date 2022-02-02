@@ -17,6 +17,14 @@ class ScheduleController extends AppController {
 
     public function league_schedule()
     {
+        session_start();
+        if(!isset($_SESSION['id'])){
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/login");
+        }
+        $_SESSION['last'] = $_SESSION['current'];
+        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
+
         $id = $_GET["id"];
 
         $schedule = $this->scheduleRepository->getSchedule($id); //TODO NA STAŁE WARTOŚĆ USTAWIONA

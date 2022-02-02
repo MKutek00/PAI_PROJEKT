@@ -37,6 +37,8 @@
             </ul>
         </nav>
         <main class="fm-main">
+            <button id="logout">Wyloguj</button>
+
             <div class="find-match-logo">
                 <img class="fm-logo" src="public/img/prosze.svg">
             </div>

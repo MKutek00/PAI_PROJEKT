@@ -35,6 +35,7 @@
         </ul>
     </nav>
     <main>
+        <button id="logout">Wyloguj</button>
         <img class="news-logo" src="public/img/news.svg">
         <section class="news">
         <?php foreach($news as $new): ?>

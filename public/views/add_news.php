@@ -35,6 +35,7 @@
         </ul>
     </nav>
     <main>
+        <button id="logout">Wyloguj</button>
         <section class="project-form">
             <h1>Dodaj News</h1>
             <form action="add_news" method="POST" ENCTYPE="multipart/form-data">

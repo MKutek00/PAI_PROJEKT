@@ -10,3 +10,6 @@ document.getElementById("nlButton").onclick = function () {
 document.getElementById("dnButton").onclick = function () {
     location.href = "http://localhost:8080/add_news";
 };
+document.getElementById("logout").onclick = function (){
+    location.href = "http://localhost:8080/logout";
+};

@@ -15,6 +15,14 @@ class FindMatchController extends AppController{
     }
 
     public function find_match(){
+        session_start();
+        if(!isset($_SESSION['id'])){
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/login");
+        }
+        $_SESSION['last'] = $_SESSION['current'];
+        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
+
         return $this->render('find_match');
 
     }
@@ -33,6 +41,14 @@ class FindMatchController extends AppController{
 //        $matches = $this->findMatchRepository->findMatch($lat,$lon,$range);
 //        return $this->render('find_match', ['messages' => $this->message,
 //                                                    'matches' => $matches]);
+        session_start();
+        if(!isset($_SESSION['id'])){
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/login");
+        }
+        $_SESSION['last'] = $_SESSION['current'];
+        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
+
         $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
         if ($contentType === "application/json") {
             $content = trim(file_get_contents("php://input"));

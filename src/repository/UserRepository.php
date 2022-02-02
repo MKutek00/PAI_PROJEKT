@@ -16,6 +16,10 @@ class UserRepository extends Repository
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
+//        $cookie_name = "user";
+//        $cookie_value = json_encode($user);
+//        setcookie($cookie_name, $cookie_value, time() + (86400 * 7), "/");
+
         if ($user == false) {
             return null;
         }

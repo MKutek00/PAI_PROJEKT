@@ -21,6 +21,6 @@ Router::get('league_schedule', 'ScheduleController');
 
 Router::get('get_match', 'FindMatchController');
 
-
+Router::get('logout','SecurityController');
 
 Router::run($path);

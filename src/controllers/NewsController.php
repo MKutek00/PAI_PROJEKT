@@ -20,12 +20,33 @@ class NewsController extends AppController {
     }
 
     public function news(){
+        session_start();
+//        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
+
+
+        if(!isset($_SESSION['id'])){
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/login");
+        }
         $news = $this->newsRepository->getNews();
         $this->render('news', ['news' => $news]);
     }
 
-    public function add_news()
-    {   
+    public function add_news(){
+        session_start();
+        if(!isset($_SESSION['id'])){
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/login");
+        }
+        $_SESSION['last'] = $_SESSION['current'];
+        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
+
+        echo $_SESSION['current'];
+        echo $_SESSION['last'];
+        if($_SESSION['id'] !== "gutek@gmail.com"){
+            header("Location: {$_SESSION['current']}");
+        }
+
         if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
             if(move_uploaded_file(
                 $_FILES['file']['tmp_name'], 

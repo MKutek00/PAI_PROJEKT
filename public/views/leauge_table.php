@@ -35,6 +35,8 @@
         </ul>
     </nav>
     <main>
+        <button id="logout">Wyloguj</button>
+
         <div class="selection-container">
             <div class="selection">
                 <p class="select">

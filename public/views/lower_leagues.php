@@ -36,6 +36,8 @@
             </ul>
         </nav>
         <main>
+            <button id="logout">Wyloguj</button>
+
             <img class="lowerleaugeslogo" src="public/img/lower_leauges.svg">
             <div class="lowerleaugstopic">Ligi Regionalne 2021/22 - Małopolski ZPN</div>
             <section class="lower_leauges">

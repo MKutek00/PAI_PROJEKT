@@ -3,6 +3,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   height: 100vh;
+  margin: 0;
 }
 
 nav {
@@ -458,4 +459,9 @@ form.login {
   height: 40px;
   overflow-wrap: break-word;
   line-height: 1em;
+}
+#logout{
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }

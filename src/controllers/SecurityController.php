@@ -4,7 +4,6 @@ require_once 'AppController.php';
 require_once __DIR__.'/../models/User.php';
 require_once __DIR__.'/../repository/UserRepository.php';
 
-
 class SecurityController extends AppController {
 
     private $userRepository;
@@ -36,12 +35,22 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['Błędne hasło!']]);
         }
 
+            session_start();
+        $_SESSION['last'] = $_SESSION['current'];
+        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
 
-        $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/news");
+            $_SESSION['id'] = $user->getEmail();
 
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/news");
     }
+
+
     public function register(){
+        session_start();
+        $_SESSION['last'] = $_SESSION['current'];
+        $_SESSION['current'] = $_SERVER['HTTP_REFERER'];
+
         if (!$this->isPost()) {
             return $this->render('register');
         }
@@ -60,4 +69,13 @@ class SecurityController extends AppController {
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
 
     }
+
+    public function logout(){
+        session_start();
+        session_unset();
+        session_destroy();
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/login");
+    }
+
 }
