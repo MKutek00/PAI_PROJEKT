@@ -69,7 +69,7 @@ ul {
   margin: 1em 0em 1em 1em;
 }
 
-li:last-child {
+.nav_ul > ul > li:last-child {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -454,9 +454,9 @@ form.login {
 }
 
 .getLeague,
-.getLocation{
+.getLocation,
+.getData{
   margin:0;
-  height: 40px;
   overflow-wrap: break-word;
   line-height: 1em;
 }
@@ -464,4 +464,142 @@ form.login {
   position: absolute;
   top: 0px;
   right: 0px;
+}
+
+@media only screen and (max-device-width: 450px) {
+  form.login {
+    width: 80%;
+    height: 45%;
+  }
+
+  .login_logo > img {
+    width: 80%;
+  }
+
+  .login_input {
+    height: 50px;
+  }
+
+  * {
+    font-size: 36px;
+  }
+
+  .login_button {
+
+  }
+
+  form.register {
+    width: 80%;
+    height: 70%;
+  }
+
+  .register > button {
+    width: 70%;
+    height: 90px;
+    font-size: 36px;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    flex-direction: row;
+    height: 20vw;
+    width: 100%;
+  }
+
+  nav > img {
+    display: none;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .fa-instagram:before,
+  .fa-facebook-square:before,
+  .fa-twitter:before,
+  .fa-plus:before,
+  .fa-table:before,
+  .fa-futbol:before,
+  .fa-home:before {
+    display: none;
+  }
+
+  .leftpanel {
+    width: 80%;
+    border-radius: 30px;
+    margin: 0;
+  }
+
+  nav > ul > li {
+    margin: 0;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .news-logo {
+    width: 70%;
+    height: 10%;
+    margin: 1em 0 0;
+  }
+
+  .news {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  div.small {
+    height: 500px;
+  }
+
+  div.small > img {
+    height: 60%;
+  }
+
+  div.small > div > h2 {
+    font-size: 50px;
+  }
+
+  div.small > div > p {
+    font-size: 36px;
+  }
+
+  .definition {
+    display: none;
+  }
+
+  .td {
+    font-size: 30px;
+  }
+
+  .fm_main {
+    height: 100%;
+  }
+
+  .fm-logo {
+    width: 100%;
+  }
+
+  .fm-button {
+    height: 40%;
+    font-size: 36px;
+    width: 90%;
+  }
+  .fa-search-location:before{
+    display: none;
+  }
+  .vertical-line{
+      display: none;
+  }
+  .location-input{
+    font-size: 36px;
+  }
+.zakres-input{
+  font-size: 36px;
+}
 }

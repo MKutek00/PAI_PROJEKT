@@ -10,7 +10,7 @@
 <body>
     <nav>
         <img src="public/img/logo.svg">
-        <ul>
+        <ul class="nav_ul">
             <li>
                 <i class="fas fa-home"></i>
                 <button id="sgButton" class="leftpanel">Strona Główna</button>

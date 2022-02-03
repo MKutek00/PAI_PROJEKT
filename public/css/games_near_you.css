@@ -62,3 +62,16 @@ th {
   font-size: 2em;
   margin: 10px;
 }
+
+@media only screen and (max-device-width: 450px) {
+  .fa-map-marker:before{
+    display: none;
+  }
+  .lower p {
+  font-size:36px;
+  }
+.getDstc{
+  display: none;
+}
+
+}

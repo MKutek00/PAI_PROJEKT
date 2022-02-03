@@ -47,3 +47,17 @@ section.project-form {
     letter-spacing: 0px;
     color: #000000;
 }
+
+@media only screen and (max-device-width: 450px) {
+.project-form > form{
+    width:100%;
+}
+.project-form > form > input,
+.project-form > form > textarea{
+    width:70%;
+}
+.project-form > form > button{
+    width: 60%;
+    height: 10%;
+}
+}

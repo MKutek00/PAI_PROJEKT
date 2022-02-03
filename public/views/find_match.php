@@ -12,7 +12,7 @@
 <body>
         <nav>
             <img src="public/img/logo.svg">
-            <ul>
+            <ul class="nav_ul">
                 <li>
                     <i class="fas fa-home"></i>
                     <button id="sgButton" class="leftpanel">Strona Główna</button>
@@ -57,28 +57,6 @@
             </div>
 <!--        </form>-->
             <section class="games-near-you">
-<!--                <template id="match-template">-->
-                    <div>
-                        <i class="fas fa-search-location"></i>
-                        <div class="right-part">
-                            <table>
-                                <tr class="upper">
-                                    <th class="bgf">
-                                        <p class = "getLocation">location</p>
-                                        <p class = "getDstc">dstc</p>
-                                    </th>
-                                    <th class="ln"><p class="getLeague">league</p> </th>
-                                    <th class="bgf"><p class="getData">date</p> </th>
-                                </tr>
-                                <tr class="lower">
-                                    <th>    <p class="getTeamA">teamA</p>   </th>
-                                    <th>    <p>----</p>                     </th>
-                                    <th>    <p class="getTeamB">teamB</p>   </th>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-<!--                </template>-->
             </section>
         </main>
 </body>

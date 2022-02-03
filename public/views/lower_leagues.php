@@ -9,7 +9,7 @@
     <title>Ligi</title>
 </head>
 <body>
-        <nav>
+        <nav class="nav_ul">
             <img src="public/img/logo.svg">
             <ul>
                 <li>
