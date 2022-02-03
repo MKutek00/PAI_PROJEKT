@@ -4,6 +4,7 @@ section {
   grid-template-columns: 1fr;
   padding: 1em 2em;
   margin: 1em;
+  margin-top: 3em;
   overflow: auto;
   justify-items: center;
   row-gap: 1em;
@@ -17,7 +18,7 @@ section > div {
   border: 1px solid #707070;
 }
 
-.gny-icon {
+.fa-search-location {
   width: 10%;
   font-size: 3em;
   color: gray;
@@ -60,4 +61,17 @@ th {
   color: #828282;
   font-size: 2em;
   margin: 10px;
+}
+
+@media only screen and (max-device-width: 450px) {
+  .fa-map-marker:before{
+    display: none;
+  }
+  .lower p {
+  font-size:36px;
+  }
+.getDstc{
+  display: none;
+}
+
 }

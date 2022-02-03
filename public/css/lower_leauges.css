@@ -31,3 +31,26 @@ section {
   color: black;
   margin-right: 10px;
 }
+@media only screen and (max-device-width: 450px) {
+
+  .lower_leauges{
+    grid-template-columns: 1fr;
+  }
+  .lower_leauges > ul > li{
+    line-height: 3em;
+  }
+  .classBlist{
+    font-size: 36px;
+  }
+  .lowerleaugstopic {
+    width: 90%;
+    height: 40%;
+    font-size: 36px;
+  }
+  .lowerleaugeslogo{
+    width: 60%;
+  }
+
+
+
+}

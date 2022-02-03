@@ -3,6 +3,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   height: 100vh;
+  margin: 0;
 }
 
 nav {
@@ -32,8 +33,7 @@ nav > img {
 
 a {
   text-decoration: none;
-  display: inline-block;
-  line-height: 2em;
+  color: black;
 }
 
 li i {
@@ -69,7 +69,7 @@ ul {
   margin: 1em 0em 1em 1em;
 }
 
-li:last-child {
+.nav_ul > ul > li:last-child {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -92,8 +92,7 @@ main {
   text-align: center;
 }
 .fm-logo {
-  width: 90%;
-  height: 90%;
+  width: 50%;
   text-align: center;
   justify-content: center;
   margin: auto;
@@ -102,7 +101,8 @@ main {
 .location {
   width: 80%;
   height: 20%;
-  margin-top: 2em;
+  /*margin-top: 2em;*/
+  text-align: center;
 }
 
 .first-line {
@@ -138,6 +138,19 @@ main {
   color: #b6afaf;
 }
 
+.zakres-input {
+  height: 70%;
+  width: 90%;
+  text-align: center;
+  border: 0;
+  margin: 0.5em;
+  background-color: transparent;
+  font: normal normal normal 15px/24px Arial;
+  letter-spacing: 0px;
+  color: #b6afaf;
+}
+
+
 .vertical-line {
   border: 3px solid #707070;
   background-color: #707070;
@@ -170,25 +183,15 @@ main {
   margin-top: 1em;
 }
 
-.zakres-input {
-  height: 70%;
-  width: 90%;
-  text-align: center;
-  border: 0;
-  margin: 0.5em;
-  background-color: transparent;
-  font: normal normal normal 15px/24px Arial;
-  letter-spacing: 0px;
-  color: #b6afaf;
-}
+
 
 .fm-button {
-  height: 5vw;
-  width: 40%;
+  width: 80%;
   background: #2e704d 0% 0% no-repeat padding-box;
   border: 1px solid #707070;
   border-radius: 2em;
   margin: 1em;
+  margin-top: 10px;
   padding: 0.5em;
 
   text-align: center;
@@ -300,6 +303,7 @@ tbody {
 
 .promotion td {
   color: #77ff21;
+  text-align: center;
 }
 .promotion:hover {
   background-color: #02ff45;
@@ -310,6 +314,7 @@ tbody {
 
 .normal td {
   color: #828282;
+  text-align: center;
 }
 .normal:hover {
   background-color: #f2f2f2;
@@ -319,6 +324,8 @@ tbody {
 }
 .decrease td {
   color: #ff0000;
+  text-align: center;
+
 }
 .decrease:hover {
   background-color: #ff0000;
@@ -337,4 +344,262 @@ table .promotion {
 .gny-logo {
   width: 50%;
   margin: 10px;
+}
+
+/*  LOGIN   */
+
+.login_body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: #ebebeb 0% 0% no-repeat padding-box;
+}
+
+.login_logo{
+  text-align: center;
+  width: 80%;
+  margin: 25px;
+}
+
+form.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 40vh;
+  background: #FFFFFFE0 0% 0% no-repeat padding-box;
+  box-shadow: 0px 6px 6px #00000029;
+  border: 1px solid #707070;
+  border-radius: 33px;
+}
+
+.login_button {
+  background: transparent linear-gradient(180deg, #0e7e33 0%, #073f1a 100%) 0%
+    0% no-repeat padding-box;
+  border: 1px solid #707070;  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 19px;
+  width: 50%;
+  border: none;
+  color: white;
+  margin: 1em;
+  line-height: 2.5em;
+}
+
+.login_input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 1em;
+  margin: 1em;
+  width: 50%;
+}
+
+.no-valid {
+  border-radius: 1em;
+  box-shadow: 0 0 1em red;
+  outline: none;
+}
+
+.leftpanel{
+  border: 2px solid #ffffff;
+  border-radius: 2em;
+  margin-left: 1em;
+  text-align: center;
+  letter-spacing: 0.72px;
+  color: #ffffff;
+  width: 60%;
+
+  background: transparent;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 2em;
+
+  font-size: 1em;
+}
+
+.register{
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.register > input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 1em;
+  margin: 1em;
+  width: 50%;
+}
+
+.register > button{
+  width: 40%;
+  background: #2e704d 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 2em;
+  margin: 1em;
+  margin-top: 10px;
+  padding: 0.5em;
+  text-align: center;
+  font: normal normal bold 20px/24px Arial;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+.getLeague,
+.getLocation,
+.getData{
+  margin:0;
+  overflow-wrap: break-word;
+  line-height: 1em;
+}
+#logout{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+@media only screen and (max-device-width: 450px) {
+  form.login {
+    width: 80%;
+    height: 45%;
+  }
+
+  .login_logo > img {
+    width: 80%;
+  }
+
+  .login_input {
+    height: 50px;
+  }
+
+  * {
+    font-size: 36px;
+  }
+
+  .login_button {
+
+  }
+
+  form.register {
+    width: 80%;
+    height: 70%;
+  }
+
+  .register > button {
+    width: 70%;
+    height: 90px;
+    font-size: 36px;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    flex-direction: row;
+    height: 20vw;
+    width: 100%;
+  }
+
+  nav > img {
+    display: none;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .fa-instagram:before,
+  .fa-facebook-square:before,
+  .fa-twitter:before,
+  .fa-plus:before,
+  .fa-table:before,
+  .fa-futbol:before,
+  .fa-home:before {
+    display: none;
+  }
+
+  .leftpanel {
+    width: 80%;
+    border-radius: 30px;
+    margin: 0;
+  }
+
+  nav > ul > li {
+    margin: 0;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .news-logo {
+    width: 70%;
+    height: 10%;
+    margin: 1em 0 0;
+  }
+
+  .news {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  div.small {
+    height: 500px;
+  }
+
+  div.small > img {
+    height: 60%;
+  }
+
+  div.small > div > h2 {
+    font-size: 50px;
+  }
+
+  div.small > div > p {
+    font-size: 36px;
+  }
+
+  .definition {
+    display: none;
+  }
+
+  .td {
+    font-size: 30px;
+  }
+
+  .fm_main {
+    height: 100%;
+  }
+
+  .fm-logo {
+    width: 100%;
+  }
+
+  .fm-button {
+    height: 40%;
+    font-size: 36px;
+    width: 90%;
+  }
+  .fa-search-location:before{
+    display: none;
+  }
+  .vertical-line{
+      display: none;
+  }
+  .location-input{
+    font-size: 36px;
+  }
+.zakres-input{
+  font-size: 36px;
+}
 }
