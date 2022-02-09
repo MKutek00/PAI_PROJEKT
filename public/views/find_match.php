@@ -10,9 +10,9 @@
     <title>Znajdź Mecz</title>
 </head>
 <body>
-        <nav>
+        <nav class="nav_ul">
             <img src="public/img/logo.svg">
-            <ul class="nav_ul">
+            <ul>
                 <li>
                     <i class="fas fa-home"></i>
                     <button id="sgButton" class="leftpanel">Strona Główna</button>
